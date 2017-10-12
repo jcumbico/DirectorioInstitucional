@@ -1,0 +1,27 @@
+﻿@model List<DirectorioEntidades.Persona>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Lista de personas</h2>
+
+<table>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @item.ApellidoPaterno
+            </td>
+            <td>
+                @item.ApellidoMaterno
+            </td>
+            <td>
+                @item.Nombre1
+            </td>
+        </tr>
+    }
+</table>
+
+@Html.ActionLink("Crear Registro", "CrearRegistro")
+
+
